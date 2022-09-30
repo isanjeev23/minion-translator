@@ -22,7 +22,7 @@ translateBtn.addEventListener('click', () => {
         })
     .catch(error => {
         alert("Something went wrong see console to know whats the error") ;
-        console.log(err);
+        console.log(error);
     })
 
 
