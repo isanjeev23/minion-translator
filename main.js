@@ -21,7 +21,7 @@ translateBtn.addEventListener('click', () => {
      //    console.log(json);
         })
     .catch(error => {
-        alert("Something went wrong see console to know whats the error") ;
+        alert("something went wrong! or you may have crossed 5 req limit") ;
         console.log(error);
     })
 
