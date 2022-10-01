@@ -17,8 +17,15 @@ translateBtn.addEventListener('click', () => {
     fetch(bindKeyValueToUrl(txtContent))
     .then(response => response.json())
     .then(json => {
-         outputText.textContent = json.contents.translated 
-     //    console.log(json);
+
+         //console.log(json);
+         if(json.hasOwnProperty('error') ){
+            alert(json.error.message);
+            console.warn(`get request code : ${json.error.code}\n message : ${json.error.message}`)
+         }
+         else
+         outputText.textContent = json.contents.translated ;
+
         })
     .catch(error => {
         alert("something went wrong! or you may have crossed 5 req limit") ;
